@@ -1,0 +1,28 @@
+@import "src/@fuse/scss/fuse";
+.alertError{
+    height: 48px;
+    width: 100%;
+    padding-left: 10px;
+    @include media-breakpoint('xs') {
+        height: 36px;
+        width: 100%;
+    }
+    background-color: #FCDFDF;
+    border: solid 1px #DE3535;
+    display: block;
+    margin: 0px auto;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    position: relative;
+    mat-icon{
+        margin: 0;
+        position: absolute;
+        top: 50% !important;
+        left: 5% !important;
+        transform: translate(-50%, -50%);
+        color: red;
+    }
+    .alertMessage{
+        padding-left: 8%; 
+    }
+}

@@ -16,7 +16,9 @@ import { fuseConfig } from 'app/fuse-config';
 import { AppComponent } from 'app/app.component';
 import { LayoutModule } from 'app/layout/layout.module';
 import { SampleModule } from 'app/main/sample/sample.module';
-import { PagesModule} from './main/pages/pages.module'
+import { PagesModule} from './main/pages/pages.module';
+import { ShareModule } from './main/_shared/_share.module'
+
 
 const appRoutes: Routes = [
     {
@@ -31,7 +33,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent,
+        AppComponent
     ],
     imports     : [
         BrowserModule,
@@ -41,7 +43,7 @@ const appRoutes: Routes = [
         TranslateModule.forRoot(),
 
         PagesModule,
-        // Material moment date module
+        ShareModule,
         
 
         // Material
