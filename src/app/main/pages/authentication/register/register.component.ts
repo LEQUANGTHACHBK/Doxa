@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators, FormControl } from '@angular/forms';
 import { Subject} from 'rxjs';
 import { takeUntil } from 'rxjs/internal/operators';
 
@@ -44,8 +44,9 @@ export class RegisterComponent implements OnInit {
       fname: ['', Validators.required],
       lname: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phoneNum: ['', Validators.required],
-
+      phoneNum: ['', [Validators.required, phoneNumberValidator]],
+      AdId:[],
+      AdNa:[]
     });
 
     // Update the validity of the 'passwordConfirm' field
@@ -63,4 +64,10 @@ export class RegisterComponent implements OnInit {
     this._unsubscribeAll.complete();
   }
 
+}
+function phoneNumberValidator(registerForm : FormControl){
+  if(isNaN(registerForm.value) === false){
+    return null;
+  }
+  return { phoneNum : true};
 }

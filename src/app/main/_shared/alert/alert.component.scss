@@ -1,14 +1,8 @@
 @import "src/@fuse/scss/fuse";
-.alertError{
+div{
     height: 48px;
     width: 100%;
     padding-left: 10px;
-    @include media-breakpoint('xs') {
-        height: 36px;
-        width: 100%;
-    }
-    background-color: #FCDFDF;
-    border: solid 1px #DE3535;
     display: block;
     margin: 0px auto;
     margin-top: 5px;
@@ -18,11 +12,21 @@
         margin: 0;
         position: absolute;
         top: 50% !important;
-        left: 5% !important;
+        left: 6% !important;
         transform: translate(-50%, -50%);
-        color: red;
+        color: #DE3535;
     }
     .alertMessage{
-        padding-left: 8%; 
+        position: absolute;
+        top: 50% !important;
+        left: 58% !important;
+        transform: translate(-50%, -50%);
+        color: #DE3535;
+        font-size: 12px;
+        font-weight: 500;
     }
 }
+
+@import "../../../../assets/styles/bootstrap_customizations.scss";
+@import "../../../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../../../../node_modules/bootstrap/scss/bootstrap.scss";

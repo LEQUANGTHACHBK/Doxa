@@ -3,6 +3,7 @@ import { AlertComponent} from './alert.component';
 import { MaterialModule} from '../../angular-Material/material.module'
 import { TranslateModule } from '@ngx-translate/core';
 import { FuseSharedModule } from '@fuse/shared.module';
+import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap'
 @NgModule({
     declarations:[
         AlertComponent
@@ -10,7 +11,8 @@ import { FuseSharedModule } from '@fuse/shared.module';
     imports: [
         MaterialModule,
         TranslateModule,
-        FuseSharedModule
+        FuseSharedModule,
+        NgbAlertModule
     ],
     exports: [
         AlertComponent
